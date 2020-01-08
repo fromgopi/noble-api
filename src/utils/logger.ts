@@ -6,11 +6,16 @@ const logger = createLogger({
     {
       level: "info",
       type: "rotating-file",
-      path: process.cwd() + "/logs/app.log"
+      path: "/var/api-logs/noble-api/app.log"
     },
     {
       level: "debug",
       stream: process.stderr
+    },
+    {
+      level: "error",
+      type: "rotating-file",
+      path: "/var/api-logs/noble-api/app.log"
     }
   ],
   src: true
